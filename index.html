@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Container</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+                    
+    <style>
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @media (min-width: 768px) {
+            @keyframes slideIn {
+                0% {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(calc(20% - 20vw + 20%));
+                    opacity: 1;
+                }
+            }
+        }
+        .slide-in {
+            animation: slideIn 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        }
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+        .delay-2 {
+            animation-delay: 0.3s;
+        }
+        .delay-3 {
+            animation-delay: 0.5s;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="bg-[#6ec1e4] p-4">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="mb-4">
+                    <img src="image/logo.png" alt="IWD Logo" class="h-16 inline-block">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#" class="text-white">Login/Signup</a>
+                    <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+
+                <!-- Mobile/Tablet Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-white">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden lg:flex justify-center mt-4 space-x-4">
+                <a href="#" class="text-white">INAD HOME</a>
+                <a href="#" class="text-white">STAFFING SOLUTIONS</a>
+                <a href="#" class="text-white">PROJECT MANAGEMENT</a>
+                <a href="#" class="text-white">MARKETING SOLUTION</a>
+                <a href="#" class="text-white">BLOG</a>
+                <a href="#" class="text-white">CONTACT</a>
+                <a href="#" class="text-white">ABOUT US</a>
+            </div>
+
+            <!-- Mobile/Tablet Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="#" class="block text-white py-2">Login/Signup</a>
+                <div class="flex justify-center space-x-4 py-2">
+                    <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+                <a href="#" class="block text-white py-2">INAD HOME</a>
+                <a href="#" class="block text-white py-2">STAFFING SOLUTIONS</a>
+                <a href="#" class="block text-white py-2">PROJECT MANAGEMENT</a>
+                <a href="#" class="block text-white py-2">MARKETING SOLUTION</a>
+                <a href="#" class="block text-white py-2">BLOG</a>
+                <a href="#" class="block text-white py-2">CONTACT</a>
+                <a href="#" class="block text-white py-2">ABOUT US</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div class="text-center">
+                <img src="image/people.png" alt="Staffing Solutions" class="h-24 w-24 mx-auto rounded-full mb-4" loading="lazy">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Staffing Solutions</h3>
+               
+            </div>
+            <div class="text-center">
+                <img src="image/arrow.png" alt="Project Management" class="h-24 w-24 mx-auto rounded-full mb-4" loading="lazy">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Project Management</h3>
+                         </div>
+            <div class="text-center">
+                <img src="image/idea.png" alt="Marketing Solutions" class="h-24 w-24 mx-auto rounded-full mb-4" loading="lazy">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Marketing Solutions</h3>
+                           </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+                <div class="relative bg-cover bg-center min-h-[48rem] sm:min-h-[52rem] md:min-h-[56rem] lg:min-h-[48rem]" style="background-image:  url('image/city.jpg');" loading="lazy">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative container mx-auto px-4 py-8 sm:py-12 md:py-16 lg:py-20">
+                      <!-- Logo -->
+                      <div class="mb-8">
+                        <img src="image/logo.png" alt="Logo" class="w-48 h-auto sm:w-56 md:w-64 lg:w-72">
+                      </div>
+                  
+                      <!-- Text Container -->
+                      <div class="bg-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg shadow-lg max-w-3xl mx-auto lg:ml-0 lg:mr-auto">
+                        <!-- Paragraphs -->
+                        <p class="mb-4 text-base sm:text-lg md:text-xl lg:text-xl text-black bg-[#6ec1e4] p-3 sm:p-4 rounded-xl">
+                            INAD is a full – service promotion agency with service lines that address all of your marketing needs. We are a team of professionals specializing in marketing and promotion services.
+                        </p>
+                        <p class="mb-6 text-base sm:text-lg md:text-xl lg:text-xl text-black bg-[#6ec1e4] p-3 sm:p-4 rounded-xl">
+                            We are a multi service company with over 10 years of Experience in national retail marketing solutions, Project management ,consumer sampling, in and out of store promotions, merchandising and visibility survey in all the major regions of Ethiopia, deploying over 100 brand ambassadors. 
+                        </p>
+                  
+                        <!-- List -->
+                        <ul class="list-disc list-inside space-y-2 text-[#6ec1e4] text-base sm:text-lg md:text-xl lg:text-xl">
+                          <li>Project Management </li>
+                          <li>Staffing Solutions </li>
+                          <li>
+                            Marketing Solutions 
+                            <ul class="list-circle list-inside ml-4 mt-2 space-y-1">
+                              <li>Field marketing 
+
+                              </li>
+                              <li>  Brand Activation </li>
+                              <li>Point of sale & Marketing/li>
+                            </ul>
+                          </li>
+                          <li>
+                            Materials 
+                            <ul class="list-circle list-inside ml-4 mt-2">
+                              <li>Marketing management & Research</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <section class="bg-[#6ec1e4] py-16 md:py-24 lg:py-32 relative overflow-hidden">
+                    <div class="container mx-auto px-4">
+                        <div class="flex flex-col items-center">
+                            <div class="text-white mb-8 w-full relative">
+                                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-in delay-1">First Heading</h1>
+                                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-in delay-2">Second Heading</h1>
+                                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-in delay-3">Third Heading</h1>
+                            </div>
+                            <div class="mt-12 md:mt-0 md:absolute md:left-2/3 md:transform md:-translate-x-1/2">
+                                <img src="image/logo.png" alt="Logo" class="w-48 h-auto sm:w-56 md:w-64 lg:w-72">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+
+                <div class="flex flex-col items-center justify-between p-4 bg-gray-100 rounded-lg shadow-md md:flex-row">
+                    <div class="w-full md:w-2/3 ml-4 md:ml-0 mb-4 md:mb-0">
+                        <!-- Image on the left -->
+                        <img src="image/eth.png" alt="Description of the image" class="w-full rounded-lg">
+                    </div>
+                    <div class="w-full md:w-3/4 ml-4 md:ml-0">
+                        <!-- Paragraph on the right with one yellow word -->
+                        <p class="lg:text-2xl text-gray-700">
+                            CURRENTLY CALLING ON OVER <span class="text-yellow-500"> 5000 </span> TORES ACROSS ETHIOPIA
+                        </p>
+                        <!-- Horizontal line below the paragraph -->
+                        <hr class="my-4 md:my-0">
+                        <!-- h6 text below the line -->
+                        <h6 class="text-1xl text-gray-600">RETAIL . INDEPENDENT STORES . WHOLESALERS . INFORMAL STORES</h6>
+                    </div>
+                </div>
+
+
+                <div class="bg-[#6ec1e4] mx-auto p-8 rounded-lg shadow-md">
+                    <div class="flex flex-col items-center justify-center md:flex-row">
+                      <p class="text-4xl font-bold leading-relaxed">
+                        WHAT CAN    <img src="image/logo.png" class="inline-block h-30 w-40 ">   DO FOR MY BUSINESS ?
+                      </p>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+
+                  
+
+                  <div class="container mx-auto p-12 bg-white bord rounded-3xl shadow-md border border-[#6ec1e4]">
+                    <div class="flex flex-col items-start md:flex-row">
+                      
+                        <img src="image/people.png" alt="Staffing Solutions" class="h-24 w-24 mx-auto rounded-full mb-4" loading="lazy">
+                      
+                      <div class="w-full md:w-5/6">
+                        <h2 class="text-2xl text-[#1face9] font-bold mb-4">Staffing Solutions</h2>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Staffing Solutions connects employers with qualified candidates, for all business sizes. We’ll work with you to define your needs and solve your specific challenges.                        </p>
+                        <p class="text-lg leading-relaxed mb-4">
+                         INAD has the experience, expertise and relationships to help employers hire & retain top talent. >Using a strategic, efficient system, we take the guesswork out of the hiring process.</p>
+                         <p class="text-lg leading-relaxed mb-4">
+                            We provide in-depth training to qualified candidates, that involves thorough understanding of your objectives, your company’s ethos and work environment, as well as hands on INAD Live Data System training, enabling INAD to track and monitor performances during the project cycle.
+                        </p>
+                        <br>
+                        <h2 class="text-xl mb-4">Our staffing solutions range from:</h2>
+                        <ul class="text-lg text-[#1face9] list-disc list-inside ">
+                          <li>Temporary staffing</li>
+                          <li>Temporary to-hire-staffing </li>
+                          <li>Direct hire solutions</li>
+                          <li>On-site management</li>
+                          <li>Payroll services</li>
+                          <li>Contingent labour programme management</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <br>
+                  <br>
+                  <br>
+
+                  <div class="container mx-auto p-12 bg-white bord rounded-3xl shadow-md border border-[#6ec1e4]">
+                    <div class="flex flex-col items-start md:flex-row">
+                      
+                        <img src="image/arrow.png" alt="Staffing Solutions" class="h-24 w-24 mx-auto rounded-full mb-4" loading="lazy">
+                      
+                      <div class="w-full md:w-5/6">
+                        <h2 class="text-2xl text-[#1face9] font-bold mb-4">Project Management</h2>
+                        <p class="text-lg leading-relaxed mb-4">
+                            INAD promotion has been managing highly complex, national projects for many of Ethiopian’s  leading brands for over 5 years. We provide a new outlook to achieving your business project objectives, by mitigating some of the common pitfalls that lead to project failure. Our diverse and skilled workforce provide professional insight and techniques to analyse whether some planned initiatives will be more effective than others.                        </p>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Achieving quality results in a timely manner is composed and driven by INAD’s Live Data System. By integrating a custom made process package for each project, we are able to identify real-time performances, data, statuses and HR management.</p>
+                                                     <p class="text-lg leading-relaxed mb-4">
+                                                        We provide our clients with detailed reports throughout the project cycle to ensure project performances are being achieved in a timely manner.
+
+                        </p>
+
+
+
+                    </div>
+                </div>
+              </div>
+
+
+              <br>
+              <br>
+              <br>
+
+
+
+              <div class="container mx-auto p-12 bg-white bord rounded-3xl shadow-md border border-[#6ec1e4]">
+                <div class="flex flex-col items-start md:flex-row">
+                  
+                    <img src="image//idea.png" alt="Staffing Solutions" class="h-24 w-24 mx-auto rounded-full mb-4" loading="lazy">
+                  
+                  <div class="w-full md:w-5/6">
+                    <h2 class="text-2xl text-[#1face9] font-bold mb-4">Marketing Solutions ​</h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Operating  as an external consultancy INAD provide Marketing Solutions for our clients. As a turnkey agency we offer the best value for our clients.We are skilled at the development of Marketing Campaigns, Customer Activities and Conceptual Initiatives.</p>
+                     <p class="text-lg leading-relaxed mb-4">
+                        We also facilitate ATL Media Planning and Buying, PR Services and Practices, Online Marketing and Social Media Tactics and even Event planning and coordination i.e. product launches, press events and more. </p>
+
+                        
+                        <div class="w-72 text-lg font-medium bg-transparent border-yellow-500 border-2 rounded-lg">
+                            <a href="#" aria-current="true" class="block w-full px-4 py-2 bg-transparent border-none rounded-t-lg cursor-pointer hover:bg-[#6ec1e4] hover:text-white">
+                              FIELD MARKETING
+                            </a>
+                            <a href="#" class="block w-full px-4 py-2 mt-2 border-none cursor-pointer hover:bg-[#6ec1e4] hover:text-white">
+                              MARKETING MANAGEMENT
+                            </a>
+                            <a href="#" class="block w-full px-4 py-2 mt-2 rounded-b-lg border-none cursor-pointer hover:bg-[#6ec1e4] hover:text-white">
+                              ACTIVATIONS
+                            </a>
+                            <a href="#" class="block w-full px-4 py-2 mt-2 rounded-b-lg border-none cursor-pointer hover:bg-[#6ec1e4] hover:text-white">
+                               RESEARCH
+                              </a>
+                              <a href="#" class="block w-full px-4 py-2 mt-2 rounded-b-lg border-none cursor-pointer hover:bg-[#6ec1e4] hover:text-white">
+                                INSTORE SOLUTIONS
+                              </a>
+                          </div>
+
+
+                </div>
+            </div>
+          </div>
+
+
+
+          <div>
+            
+
+            <div class="bg-[#b3dde7] py-12">
+                <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
+                    <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+                        
+                        <p class=" text-3xl leading-relaxed py-8">WE UNDERSTAND THE FUNDAMENTAL PROCESSES OF ACHIEVING GROWTH FOR OUR CLIENTS.</p>
+                    </div>
+                    <div class="md:w-1/2 px-4 ">
+                        <img src="image/bg.png" alt="Photo" class="rounded-2xl shadow-md " loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container mx-auto py-6">
+                
+                
+                <div class="relative overflow-hidden border-t-4 border-b-4 border-yellow-500 py-4">
+                    <div id="slideContainer" class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Add your company logos here -->
+                            <img src="image/1.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/2.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/3.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/4.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/5.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/6.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/7.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/8.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/9.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/10.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/11.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/12.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/13.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/14.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/15.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/16.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/17.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/18.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/19.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/20.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/21.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/22.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/23.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/24.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/25.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/26.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/27.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/28.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/29.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/30.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/31.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/32.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/33.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/34.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/35.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/36.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/37.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/38.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/39.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/40.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/41.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/42.png" alt="Company 2" class="w-40 h-40 object-contain mx-4">
+                            <img src="image/43.png" alt="Company 1" class="w-40 h-40 object-contain mx-4">
+                            
+                    </div>
+            
+                    <div class="flex justify-center mt-4">
+                        <button id="prevBtn" class="bg-[#6ec1e4] hover:bg-yellow-500 text-white font-bold p-2 rounded-full mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+                        <button id="nextBtn" class="bg-[#6ec1e4] hover:bg-yellow-500 text-white font-bold p-2 rounded-full ml-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+<footer class="bg-[#6ec1e4] text-black py-5 w-full">
+    <div class="flex flex-wrap justify-between mx-auto px-4 ">
+        <!-- Column 1 -->
+        <div class="flex-1 px-20 py-2">
+            <h5 class="font-bold mb-2">Staffing Solutions</h5>
+            <ul class="space-y-1">
+                <li>Project Management</li>
+                <li>Field Marketing</li>
+                <li>Activations</li>
+                <li>Instore Solutions</li>
+                <li>Marketing Management</li>
+            </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="flex-1 px-16 py-2">
+            <h5 class="font-bold mb-2">Research</h5>
+            <ul class="space-y-1">
+                <li>About Us</li>
+                <li>Job Enquiries</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="flex-1 px-24 py-2 text-right">
+            <div class="mb-2">
+                <img src="image/logo.png" alt="IWD Logo" class="h-12 inline-block">
+            </div>
+            <hr><div class="font-bold text-lg right-8">+251 920 539 090</div><hr>
+            <div class="text-lg mt-1">Bole infront of Ramada Hotel, Addis Ababa, Ethiopia</div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-sm mt-8 border-t border-black pt-2">
+        © INAD PROMOTION 2019 * ALL RIGHT RESERVED. Designed by African Sunrise
+    </div>
+</footer>
+
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+        const slideContainer = document.getElementById('slideContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let position = 0;
+        const step = 5; // Number of logos to scroll at a time
+        const totalLogos = slideContainer.children.length;
+        const logoWidth = 200; // Width of each logo + gap
+
+        function cloneLogos() {
+            const logos = slideContainer.innerHTML;
+            slideContainer.innerHTML = logos + logos; // Duplicate all logos
+        }
+
+        function slide(direction) {
+            position += direction * step;
+            const maxPosition = totalLogos;
+
+            if (position < 0) {
+                position = maxPosition + position;
+            } else if (position >= maxPosition) {
+                position = position - maxPosition;
+            }
+
+            slideContainer.style.transition = 'transform 0.5s ease-in-out';
+            slideContainer.style.transform = `translateX(${-position * logoWidth}px)`;
+        }
+
+        function autoSlide() {
+            slide(-1); // Move left by default
+        }
+
+        cloneLogos(); // Clone logos before starting the slideshow
+
+        let intervalId = setInterval(autoSlide, 3000); // Change slide every 3 seconds
+
+        prevBtn.addEventListener('click', () => {
+            clearInterval(intervalId); // Stop auto-sliding
+            slide(1); // Move right
+            intervalId = setInterval(autoSlide, 3000); // Restart auto-sliding
+        });
+
+        nextBtn.addEventListener('click', () => {
+            clearInterval(intervalId); // Stop auto-sliding
+            slide(-1); // Move left
+            intervalId = setInterval(autoSlide, 3000); // Restart auto-sliding
+        });
+
+        // Reset position when transition ends to create seamless loop
+        slideContainer.addEventListener('transitionend', () => {
+            if (position >= totalLogos) {
+                slideContainer.style.transition = 'none';
+                position = 0;
+                slideContainer.style.transform = `translateX(0)`;
+            } else if (position < 0) {
+                slideContainer.style.transition = 'none';
+                position = totalLogos + position;
+                slideContainer.style.transform = `translateX(${-position * logoWidth}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
